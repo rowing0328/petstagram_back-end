@@ -1,0 +1,10 @@
+version: '3.8'  # 사용할 Docker Compose 파일 버전
+
+services:
+  fastapi:
+    container_name: fastapi   # 컨테이너 이름 지정
+    build:
+      context: .              # 현재 디렉터리에서 빌드
+      dockerfile: Dockerfile  # 사용할 Dockerfile 경로
+    ports:
+      - "8000:8000"           # 호스트의 8000번 포트 → 컨테이너의 8000번 포트로 매핑
