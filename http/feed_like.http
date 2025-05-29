@@ -1,0 +1,17 @@
+### [POST] 피드 좋아요 등록
+POST http://localhost:8000/feed/like/1?member_id=1
+
+###
+
+### [POST] 피드 좋아요 등록 (이미 좋아요 누른 경우, 에러 확인)
+POST http://localhost:8000/feed/like/1?member_id=1
+
+###
+
+### [DELETE] 피드 좋아요 취소
+DELETE http://localhost:8000/feed/like/1?member_id=1
+
+###
+
+### [DELETE] 피드 좋아요 취소 (좋아요 정보 없음, 에러 확인)
+DELETE http://localhost:8000/feed/like/1?member_id=1
