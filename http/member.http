@@ -1,0 +1,36 @@
+### [GET] 내 정보(로그인 상태) 조회 (쿠키 필요)
+GET http://localhost:8000/member/me
+Cookie: member_id=1
+
+###
+
+### [GET] 회원 상세 조회 (member_id로 조회)
+GET http://localhost:8000/member/1
+
+###
+
+### [POST] 회원가입
+POST http://localhost:8000/member
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "nickname": "테스트유저",
+  "profile_image": "https://cdn.domain.com/profile.jpg"
+}
+
+###
+
+### [PATCH] 회원 정보 수정
+PATCH http://localhost:8000/member/1
+Content-Type: application/json
+
+{
+  "nickname": "수정된닉네임",
+  "profile_image": "https://cdn.domain.com/profile_new.jpg"
+}
+
+###
+
+### [DELETE] 회원 탈퇴(비활성화)
+DELETE http://localhost:8000/member/1
