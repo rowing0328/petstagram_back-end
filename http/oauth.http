@@ -1,0 +1,13 @@
+### [GET] 구글 OAuth 로그인 페이지로 리다이렉트
+GET http://localhost:8000/oauth/google/login
+
+###
+
+# [GET] 구글 OAuth 콜백 (직접적으로 테스트는 어렵고, 보통은 구글에서 리다이렉트로 code를 넘겨줄 때 호출)
+# code는 실제 구글 인증 flow를 거쳐야 발급됨. 아래는 샘플.
+GET http://localhost:8000/oauth/google/callback?code=sample_google_oauth_code
+
+###
+
+# 만약 인증 실패 케이스를 보고 싶으면 없는 code로 요청해서 400 확인
+GET http://localhost:8000/oauth/google/callback?code=invalid_code
