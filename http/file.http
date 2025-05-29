@@ -1,0 +1,15 @@
+### 이미지 보기
+GET http://localhost:8000/file/view?file_path=%2FUsers%2Fhyoseung%2FDesktop%2Fpetstargram%2Ftemp%2Fdc40f876f8294abe9b0eb326e750a6f3.jpeg
+
+###
+
+### 바운더리를 수동으로 작성한 이미지 업로드 요청
+POST http://localhost:8000/file/upload-file
+Content-Type: multipart/form-data; boundary=----MyBoundary
+
+------MyBoundary
+Content-Disposition: form-data; name="file"; filename="egg.jpg"
+Content-Type: image/jpeg
+
+< ../image/egg.jpg
+------MyBoundary--
