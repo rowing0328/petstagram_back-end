@@ -11,7 +11,7 @@ from domain.storage.file_storage_interface import IFileStorage
 
 class LocalFileStorage(IFileStorage):
 
-    _BASE_DIR = os.getenv("FILE_STORAGE_BASE_DI")
+    _BASE_DIR = os.getenv("FILE_STORAGE_BASE_DIR")
     _TEMP_DIR = os.path.join(_BASE_DIR, "temp")
 
     def __init__(self):
