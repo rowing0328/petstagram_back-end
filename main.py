@@ -6,13 +6,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
-from core.exception.handler.registers import value_error_handler, permission_error_handler
-from Infrastructure.config.database import create_db_and_tables
-from web.route.oauth_socials import auth_router
-from web.route.files import file_router
-from web.route.feed_likes import feed_like_router
-from web.route.feeds import feed_router
-from web.route.members import member_router
+from src.main.python.core.exception.handler.registers import value_error_handler, permission_error_handler
+from src.main.python.Infrastructure.config.database import create_db_and_tables
+from src.main.python.web.route.oauth_socials import auth_router
+from src.main.python.web.route.files import file_router
+from src.main.python.web.route.feed_likes import feed_like_router
+from src.main.python.web.route.feeds import feed_router
+from src.main.python.web.route.members import member_router
 
 
 @asynccontextmanager
